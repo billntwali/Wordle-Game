@@ -16,3 +16,4 @@ INPUT VALIDATION:
 - Must be in the dictionary (wordle.txt)
 - Case insensitive (assume lowercase input)
 """
+BUILT WITH THE ASSISTANCE OF CLAUDE AI
