@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle Game</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>WORDLE</h1>
+            <p class="subtitle">Guess the 5-letter word in 6 tries</p>
+        </header>
+
+        <!-- Game Info -->
+        <div class="game-info">
+            <div class="attempts">
+                <span>Attempts: </span>
+                <span id="current-attempt">0</span>
+                <span>/6</span>
+            </div>
+        </div>
+
+        <!-- Game Board -->
+        <div class="game-board" id="game-board">
+            <!-- Rows will be generated dynamically -->
+            <div class="row">
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+            </div>
+            <div class="row">
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+            </div>
+            <div class="row">
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+            </div>
+            <div class="row">
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+            </div>
+            <div class="row">
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+            </div>
+            <div class="row">
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+            </div>
+        </div>
+
+        <!-- Message Display -->
+        <div class="message" id="message"></div>
+
+        <!-- Input Section -->
+        <div class="input-section">
+            <input 
+                type="text" 
+                id="guess-input" 
+                placeholder="Enter your guess..." 
+                maxlength="5"
+                autocomplete="off"
+            >
+            <button id="submit-btn">SUBMIT</button>
+        </div>
+
+        <!-- Keyboard -->
+        <div class="keyboard">
+            <div class="keyboard-row">
+                <button class="key" data-key="q">Q</button>
+                <button class="key" data-key="w">W</button>
+                <button class="key" data-key="e">E</button>
+                <button class="key" data-key="r">R</button>
+                <button class="key" data-key="t">T</button>
+                <button class="key" data-key="y">Y</button>
+                <button class="key" data-key="u">U</button>
+                <button class="key" data-key="i">I</button>
+                <button class="key" data-key="o">O</button>
+                <button class="key" data-key="p">P</button>
+            </div>
+            <div class="keyboard-row">
+                <button class="key" data-key="a">A</button>
+                <button class="key" data-key="s">S</button>
+                <button class="key" data-key="d">D</button>
+                <button class="key" data-key="f">F</button>
+                <button class="key" data-key="g">G</button>
+                <button class="key" data-key="h">H</button>
+                <button class="key" data-key="j">J</button>
+                <button class="key" data-key="k">K</button>
+                <button class="key" data-key="l">L</button>
+            </div>
+            <div class="keyboard-row">
+                <button class="key key-wide" id="enter-key">ENTER</button>
+                <button class="key" data-key="z">Z</button>
+                <button class="key" data-key="x">X</button>
+                <button class="key" data-key="c">C</button>
+                <button class="key" data-key="v">V</button>
+                <button class="key" data-key="b">B</button>
+                <button class="key" data-key="n">N</button>
+                <button class="key" data-key="m">M</button>
+                <button class="key key-wide" id="backspace-key">⌫</button>
+            </div>
+        </div>
+
+        <!-- New Game Button -->
+        <div class="controls">
+            <button id="new-game-btn" class="secondary-btn">NEW GAME</button>
+        </div>
+
+        <!-- Instructions -->
+        <div class="instructions">
+            <h3>How to Play</h3>
+            <div class="instruction-item">
+                <div class="example-tile correct">A</div>
+                <p><strong>Green</strong> - Letter is in the word and in the correct position</p>
+            </div>
+            <div class="instruction-item">
+                <div class="example-tile present">B</div>
+                <p><strong>Yellow</strong> - Letter is in the word but in the wrong position</p>
+            </div>
+            <div class="instruction-item">
+                <div class="example-tile absent">C</div>
+                <p><strong>Gray</strong> - Letter is not in the word</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>Built with ❤️  | <a href="https://github.com/billntwali/Wordle-Game" target="_blank">View on GitHub</a></p>
+        </footer>
+    </div>
+
+    <!-- Game Script -->
+    <script src="game.js"></script>
+</body>
+</html>
